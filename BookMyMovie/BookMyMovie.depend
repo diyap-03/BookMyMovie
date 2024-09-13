@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1690000361 source:d:\iv semester\oops\bookmymovie\main.cpp
+	<iostream>
+	<cstring>
+	<stdlib.h>
+
+1725726233 source:d:\be\4\oops\bookmymovie\main.cpp
+	<iostream>
+	<cstring>
+	<stdlib.h>
+
