@@ -9,8 +9,7 @@
 - [Classes](#classes)
 - [Exception Handling](#exception-handling)
 - [Future Improvements](#future-improvements)
-- [Contributing](#contributing)
-- [License](#license)
+
 
 ## Features
 
@@ -48,31 +47,32 @@
 - You'll be prompted to enter your name and phone number for user management.
 - After booking, you can review your booking details, and the application will confirm your booking.
 
-## Example Output
+## Classes
 
-```plaintext
---------Welcome to BookMyMovie App-----------
+- **`Movie`**: Represents a movie with attributes like name, genre, duration, and rating.
+- **`Theater`**: Represents a theater with showtimes and venue details.
+- **`ShowTime`**: Represents a specific showtime for a movie in a theater.
+- **`User`**: Represents a user with a name, phone number, and booking history.
+- **`Ticket`**: An abstract class that calculates ticket prices and prints ticket details.
+- **`EconomyTicket`** and **`PremiumTicket`**: Subclasses of `Ticket` that handle specific pricing and ticket details.
+- **`Booking`**: Manages the booking process, seat availability, and ticket creation.
+- **`TicketFactory`**: A factory class for creating `Ticket` objects.
+- **`BookMyMovie`**: The main application class that manages movies, theaters, and users.
 
-Here is the list of available movies:
-Movie Code      Movie Name
-1               Oppenheimer
-2               Jabtak
-...
+## Exception Handling
 
-Enter the movie code for the movie you want to book:
-1
-...
+The application uses custom exceptions to handle various errors:
 
-Booking confirmed.
----------------------------------
-|      MOVIE TICKET             |
----------------------------------
-| Movie name: Oppenheimer       |
-| Duration: 180                 |
-| Venue: PVR                    |
-| Show Time: 17:30              |
-| Number of seats: 2            |
-| Type: Premium                 |
----------------------------------
+- **`InvalidChoiceException`**: Thrown when the user makes an invalid selection.
+- **`BookingNotConfirmedException`**: Thrown when the user declines to confirm the booking.
+- **`ShowTimeNotFoundException`**: Thrown when the selected showtime is not available.
+- **`NoSeatsAvailableException`**: Thrown when there are not enough seats available for booking.
+- **`InvalidSeatsException`**: Thrown when the user enters an invalid number of seats.
+- **`MovieNotFoundException`**: Thrown when the selected movie is not found.
+- **`TheaterNotFoundException`**: Thrown when the selected theater is not found.
 
+## Future Improvements
 
+- **GUI**: Implement a graphical user interface for better user interaction.
+- **Database Integration**: Store movies, theaters, users, and booking information in a database.
+- **Online Payment Integration**: Add functionality for processing payments online.
